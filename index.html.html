@@ -114,7 +114,7 @@ body::after {
   letter-spacing: 0.5px;
 }
 
-/* ── CARD BASE ── */
+/* ── Base card ── */
 .card {
   background: var(--card-bg);
   backdrop-filter: blur(12px);
@@ -127,7 +127,7 @@ body::after {
 
 .card:hover { box-shadow: var(--shadow-lg); }
 
-/* ── SCOREBOARD ── */
+/* ── Puntos ── */
 .scoreboard {
   padding: 16px;
   margin-bottom: 14px;
@@ -174,7 +174,7 @@ body::after {
   border-color: rgba(252,165,165,0.5);
 }
 
-/* ── PROGRESS ── */
+/* ── Progreso ── */
 .progress-card {
   padding: 14px 18px;
   margin-bottom: 14px;
@@ -229,7 +229,7 @@ body::after {
   50%      { transform: translateY(-60%) rotate(8deg); }
 }
 
-/* ── BOARD ── */
+/* ── Tablero ── */
 .board-card {
   padding: 16px;
   margin-bottom: 14px;
@@ -329,7 +329,7 @@ body::after {
   50%      { transform: translateY(-7px) scale(1.05) rotate(6deg); }
 }
 
-/* ── DICE SECTION ── */
+/* ── Dado ── */
 .dice-card {
   padding: 22px 18px;
   margin-bottom: 14px;
@@ -493,7 +493,7 @@ body::after {
   box-shadow: inset 0 1px 2px rgba(255,255,255,0.6);
 }
 
-/* ── COMBO TOAST ── */
+/* ── Combo ── */
 .combo-toast {
   position: fixed;
   top: 20px; left: 50%;
@@ -524,7 +524,7 @@ body::after {
 .combo-toast-num { font-family: 'Baloo 2', cursive; font-size: 1.8rem; font-weight: 900; line-height: 1; }
 .combo-toast-bonus { font-size: 0.75rem; font-weight: 700; opacity: 0.85; }
 
-/* ── NOTIFICATION ── */
+/* ── Notificaciones ── */
 .notif {
   position: fixed;
   bottom: 28px; left: 50%;
@@ -576,7 +576,7 @@ body::after {
   to   { transform: scale(1) translateY(0); opacity: 1; }
 }
 
-/* ── QUESTION MODAL ── */
+/* ── Question MODAL ── */
 .q-top {
   display: flex; align-items: center; justify-content: center;
   gap: 8px; margin-bottom: 18px;
@@ -815,7 +815,7 @@ body::after {
     <p class="subtitle">El Juego de la Apicultura</p>
   </div>
 
-  <!-- SCOREBOARD -->
+  <!-- Score -->
   <div class="card scoreboard">
     <div class="stats-grid">
       <div class="stat">
@@ -848,11 +848,11 @@ body::after {
     </div>
   </div>
 
-  <!-- PROGRESS -->
+  <!-- Progress -->
   <div class="card progress-card">
     <div class="progress-header">
       <span class="progress-label">🏁 Inicio</span>
-      <span class="progress-pct" id="progressText">1 de 50</span>
+      <span class="progress-pct" id="progressText">1 de 30</span>
       <span class="progress-label">🎯 Meta</span>
     </div>
     <div class="progress-track">
@@ -1067,7 +1067,7 @@ const specials = {
 
 // ── INIT ────────────────────────────────────────────────────
 function initGame() {
-  for (let i=0;i<50;i++)
+  for (let i=0;i<30;i++)
     tiles.push(specials[i] ? {id:i,...specials[i]} : {id:i,type:'question',label:'❓'});
   renderBoard();
   updateUI();
@@ -1164,7 +1164,7 @@ function rollDice() {
   }, 90);
 }
 
-// ── MOVE ────────────────────────────────────────────────────
+// ── Movimiento ────────────────────────────────────────────────────
 function movePlayer(steps) {
   const from = gs.pos;
   gs.pos = Math.min(from+steps, 49);
