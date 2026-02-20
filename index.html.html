@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>🐝 ApiTrivia — El Juego de la Apicultura</title>
+<title>🐝 ApiTrivial — El Juego de la Apicultura</title>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800;900&family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -865,7 +865,7 @@ body::after {
   <!-- BOARD -->
   <div class="card board-card">
     <div class="board-header">
-      <div class="board-title">🍯 Tablero Apícola — 50 casillas</div>
+      <div class="board-title">🍯 Tablero Apícola — 30 casillas</div>
     </div>
     <div class="board-grid" id="gameBoard"></div>
   </div>
@@ -874,7 +874,7 @@ body::after {
   <div class="card dice-card">
     <div class="dice-wrap">
       <div class="dice" id="dice">🎲</div>
-      <button class="roll-btn" id="rollBtn" onclick="rollDice()">🎲 Lanzar Dado</button>
+      <button class="roll-btn" id="rollBtn" onclick="rollDice()">🎲 Comenzar partid🏁</button>
     </div>
   </div>
 
@@ -893,7 +893,7 @@ body::after {
     <div class="legend-grid">
       <div class="legend-item"><div class="legend-dot" style="background:linear-gradient(135deg,#FFFBEB,#FEF9C3)"></div><span>❓ Pregunta</span></div>
       <div class="legend-item"><div class="legend-dot" style="background:linear-gradient(135deg,#FEF9C3,#FDE68A)"></div><span>🍯 Bonus +15</span></div>
-      <div class="legend-item"><div class="legend-dot" style="background:linear-gradient(135deg,#FFF1F2,#FEE2E2)"></div><span>🐝💨 Trampa -10</span></div>
+      <div class="legend-item"><div class="legend-dot" style="background:linear-gradient(135deg,#FFF1F2,#FEE2E2)"></div><span>🐝💨 Pregunta para expertos +20, +1 Saltar casilla</span></div>
       <div class="legend-item"><div class="legend-dot" style="background:linear-gradient(135deg,#ECFDF5,#D1FAE5)"></div><span>🏁 Inicio / Meta</span></div>
     </div>
   </div>
@@ -1041,7 +1041,7 @@ const Q = [
   {id:15,q:'¿Qué herramienta usa el apicultor para calmar a las abejas?',opts:['Cepillo','Ahumador','Espátula','Centrífuga'],ans:1,pts:10,dif:'easy',exp:'El ahumador produce humo que hace que las abejas consuman miel pensando que hay un incendio, volviéndose más dóciles. También enmascara las feromonas de alarma.'},
   {id:16,q:'¿A qué temperatura mantienen las abejas el interior de la colmena?',opts:['25°C','30°C','35°C','40°C'],ans:2,pts:20,dif:'hard',exp:'Las abejas mantienen la zona de cría a exactamente 35°C. En verano ventilan con sus alas, y en invierno generan calor vibrando los músculos de vuelo.'},
   {id:17,q:'¿Qué porcentaje de la alimentación humana depende de la polinización de las abejas?',opts:['10%','30%','50%','70%'],ans:2,pts:15,dif:'medium',exp:'Aproximadamente el 50% de los cultivos que consumimos dependen de la polinización de abejas. Frutas, verduras y frutos secos serían escasos sin ellas.'},
-  {id:18,q:'¿Cómo se llama la cría de abejas sin aguijón?',opts:['Apicultura','Meliponicultura','Sericultura','Cunicultura'],ans:1,pts:20,dif:'hard',exp:'La meliponicultura es la crianza de abejas meliponas o "sin aguijón", nativas de zonas tropicales. Producen miel con propiedades medicinales especiales.'},
+  {id:18,q:'¿Cual es la causa principal del fenomeno conocido como problema del colapso de las colmenas segun el consenso cientifico actual??',opts:['El uso exclusivo de glifosato en campos de cereales','Una conbinación sinérgica de patóginos, pesticidas y estrés nutricional','La interferencia de las ondas de radiofrecuencia es un sistema de navegación','El aumento de la población de avispones asiáticos a nivel global'],ans:2,pts:20,dif:'hard',exp:'El problema de colapso de las colmenas no tiene un único culpable se produce cuando factores como el ácaro varroa, el hongo Nosema y los neonicotinoides debilitan a la colonia simultaneamente.'},
   {id:19,q:'¿Qué velocidad puede alcanzar una abeja en vuelo?',opts:['10 km/h','25 km/h','40 km/h','60 km/h'],ans:1,pts:15,dif:'medium',exp:'Las abejas vuelan a unos 25 km/h en promedio, batiendo sus alas unas 200 veces por segundo. Pueden recorrer hasta 5 km desde la colmena para buscar alimento.'},
   {id:20,q:'¿Cuál es la mejor época para cosechar miel?',opts:['Primavera','Verano/Otoño','Invierno','Todo el año'],ans:1,pts:15,dif:'medium',exp:'La mejor época es a finales del verano u otoño, cuando las abejas han acumulado reservas. Siempre se debe dejar suficiente miel para que sobrevivan el invierno.'},
   {id:21,q:'¿Qué color NO pueden ver las abejas?',opts:['Rojo','Azul','Amarillo','Violeta'],ans:0,pts:10,dif:'easy',exp:'Las abejas no pueden ver el color rojo, pero pueden ver luz ultravioleta que los humanos no percibimos. Por eso muchas flores tienen patrones UV.'},
